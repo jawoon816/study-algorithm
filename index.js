@@ -45,10 +45,22 @@
 // console.log(solution(13, 33, 17));
 
 // 3.연필개수
+// function solution(n){
+//   let answer;
+//   answer=Math.ceil(n/12);
+//   return answer;
+// }
+
+// console.log(solution(178));
+
+//4.1부터 N까지 합 출력하기
 function solution(n){
-  let answer;
-  answer=Math.ceil(n/12);
+  let answer=0;
+  for(let i=1; i<=n; i++){
+      answer=answer+i;
+  }
+  
   return answer;
 }
 
-console.log(solution(178));
+console.log(solution(10));
