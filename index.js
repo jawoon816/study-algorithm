@@ -66,14 +66,35 @@
 // console.log(solution(10));
 
 // 5.최솟값 구하기
-function solution(arr){  
-  let answer, min = Number.MAX_SAFE_INTEGER;//최솟값을 가장 큰 수로 설정하기
-  for (let i = 0; i < arr.length; i++) {
-    if(arr[i]<min) min = arr[i];
+// function solution(arr){  
+//   let answer, min = Number.MAX_SAFE_INTEGER;//최솟값을 가장 큰 수로 설정하기
+//   for (let i = 0; i < arr.length; i++) {
+//     if(arr[i]<min) min = arr[i];
+//   }
+//   answer = min;
+//   return answer;
+// }
+
+// let arr=[5, 7, 1, 3, 2, 9, 11];
+// console.log(solution(arr));
+
+
+//6. 홀수
+function solution(arr) {
+  //1.홀수 =>2로 나눈 나머지가 0이 아닌 것
+  //2.홀수 합 =>reduce?
+  //3.최소값 =>for문?
+  let answer =[];
+  let a = arr.filter((i)=>i%2 !==0);
+  let b = a.reduce((x,y)=>x+y);
+  let min = a[0];
+  for(let i = 0; i<a.length; i++) {
+    if(a[i]<min) min = a[i];
   }
-  answer = min;
+  answer.push(b)
+  answer.push(min)
   return answer;
 }
 
-let arr=[5, 7, 1, 3, 2, 9, 11];
+let arr = [12,77,38,41,53,92,85]
 console.log(solution(arr));
