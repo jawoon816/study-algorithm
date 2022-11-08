@@ -96,19 +96,46 @@
 //   return answer;
 // }
 
-function solution(arr) {
-  let answer = [];
-  let sum = 0, min = Number.MAX_SAFE_INTEGER;
-  for(let x of arr) {
-    if(x%2 === 1) {
-      sum+=x;
-      if(x<min) min = x;
-    }
-  }
-  answer.push(sum);
-  answer.push(min);
-  return answer;
-}
+// function solution(arr) {
+//   let answer = [];
+//   let sum = 0, min = Number.MAX_SAFE_INTEGER;
+//   for(let x of arr) {
+//     if(x%2 === 1) {
+//       sum+=x;
+//       if(x<min) min = x;
+//     }
+//   }
+//   answer.push(sum);
+//   answer.push(min);
+//   return answer;
+// }
 
-let arr = [12,77,38,41,53,92,85]
-console.log(solution(arr));
+// let arr = [12,77,38,41,53,92,85]
+// console.log(solution(arr));
+
+//7. 10부제
+// function solution(day, arr){
+//   let answer=0;
+//   let a = [];
+//   for(let x of arr){
+//    let b = (x-day)%10 === 0
+//   if(b===true){
+//     a.push(b)
+//     answer = a.length;
+//   }
+//   }
+//   return answer;
+// }
+
+// function solution(day, arr){
+//   let answer=0;
+//   for(let x of arr) {
+//     if(x%10 === day) answer++
+//   }
+//   return answer;
+// }
+
+// arr=[12,20,54,30,87,91,30];
+// console.log(solution(0, arr));
+
+
