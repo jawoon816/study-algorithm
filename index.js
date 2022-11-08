@@ -54,13 +54,26 @@
 // console.log(solution(178));
 
 //4.1부터 N까지 합 출력하기
-function solution(n){
-  let answer=0;
-  for(let i=1; i<=n; i++){
-      answer=answer+i;
-  }
+// function solution(n){
+//   let answer=0;
+//   for(let i=1; i<=n; i++){
+//       answer=answer+i;
+//   }
   
+//   return answer;
+// }
+
+// console.log(solution(10));
+
+// 5.최솟값 구하기
+function solution(arr){  
+  let answer, min = Number.MAX_SAFE_INTEGER;//최솟값을 가장 큰 수로 설정하기
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i]<min) min = arr[i];
+  }
+  answer = min;
   return answer;
 }
 
-console.log(solution(10));
+let arr=[5, 7, 1, 3, 2, 9, 11];
+console.log(solution(arr));
