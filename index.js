@@ -80,19 +80,33 @@
 
 
 //6. 홀수
+// function solution(arr) {
+//   //1.홀수 =>2로 나눈 나머지가 0이 아닌 것
+//   //2.홀수 합 =>reduce?
+//   //3.최소값 =>for문?
+//   let answer =[];
+//   let a = arr.filter((i)=>i%2 !==0);
+//   let b = a.reduce((x,y)=>x+y);
+//   let min = a[0];
+//   for(let i = 0; i<a.length; i++) {
+//     if(a[i]<min) min = a[i];
+//   }
+//   answer.push(b)
+//   answer.push(min)
+//   return answer;
+// }
+
 function solution(arr) {
-  //1.홀수 =>2로 나눈 나머지가 0이 아닌 것
-  //2.홀수 합 =>reduce?
-  //3.최소값 =>for문?
-  let answer =[];
-  let a = arr.filter((i)=>i%2 !==0);
-  let b = a.reduce((x,y)=>x+y);
-  let min = a[0];
-  for(let i = 0; i<a.length; i++) {
-    if(a[i]<min) min = a[i];
+  let answer = [];
+  let sum = 0, min = Number.MAX_SAFE_INTEGER;
+  for(let x of arr) {
+    if(x%2 === 1) {
+      sum+=x;
+      if(x<min) min = x;
+    }
   }
-  answer.push(b)
-  answer.push(min)
+  answer.push(sum);
+  answer.push(min);
   return answer;
 }
 
