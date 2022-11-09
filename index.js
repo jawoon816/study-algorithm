@@ -138,4 +138,62 @@
 // arr=[12,20,54,30,87,91,30];
 // console.log(solution(0, arr));
 
+// 8. 일곱난쟁이
+// function solution(arr){
+//   let answer=arr;
+//   let b = 0;
+//   let c = 0;
+//   let a = arr.reduce((x,y)=>x+y,0)
+//   for(let i = 0; i < arr.length; i++){
+//     for(let j =1; j < arr.length; j++){
+//      if(a - (arr[i]+arr[j]) === 100) {
+//       b = arr[i];
+//       c = arr[j];
+//      }
+//     }
+//   }
+//   answer = arr.filter((item)=>item !== b && item !== c)
+//   return answer;
+// }
+
+// function solution(arr){
+//   let answer=arr;
+//   let a = arr.reduce((x,y)=>x+y,0)
+//   for(let i = 0; i < arr.length; i++){
+//     for(let j =1; j < arr.length; j++){
+//      if(a - (arr[i]+arr[j]) === 100) {
+//       arr.splice(j,1);
+//       arr.splice(i,1);
+//      }
+//     }
+//   }
+//   return answer;
+// }
+
+// let arr=[20, 7, 23, 19, 10, 15, 25, 8, 13];
+// console.log(solution(arr));
+
+// 9.A를 #으로
+// function solution(s){
+//   let answer="";
+//   answer=s.replaceAll("A","#")
+//   return answer;
+// }
+// function solution(s){
+  //   let answer="";
+  //   answer=s.replace(/A/g, '#');
+  //   return answer;
+  // }
+
+// function solution(s){
+//   let answer="";
+//   for(let x of s) {
+//     if(x === "A") answer+='#'
+//     else answer+=x;
+//   }
+//   return answer;
+// }
+
+// let str="BANANA";
+// console.log(solution(str));
 
