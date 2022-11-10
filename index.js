@@ -1,3 +1,6 @@
+// 기본 문제풀이
+
+
 // 1.세 수 중 최솟값
 // function solution(a, b, c){
 //   if(a<b && a<c) {
@@ -274,16 +277,31 @@
 // console.log(solution(str))
 
 // 13.대소문자변환
-function solution(s){  
-  let answer="";
-  for(let x of s){
-      if(x===x.toUpperCase()) answer+=x.toLowerCase();
-      else answer+=x.toUpperCase();
-  }
-  return answer;
-}
+// function solution(s){  
+//   let answer="";
+//   for(let x of s){
+//       if(x===x.toUpperCase()) answer+=x.toLowerCase();
+//       else answer+=x.toUpperCase();
+//   }
+//   return answer;
+// }
 
-console.log(solution("StuDY"));
+// console.log(solution("StuDY"));
+
+// 14.가장 긴 문자열
+// function solution(s){  
+//   let answer='', max=Number.MIN_SAFE_INTEGER;
+//   for(let x of s) {
+//     if(x.length > max) {
+//       max=x.length;
+//       answer=x;
+//     }
+//   }
+//   return answer;
+// }
+// let str=["teacher", "time", "student", "beautiful", "good"];
+// console.log(solution(str));
+
 
 
 
