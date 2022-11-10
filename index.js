@@ -208,11 +208,70 @@
 //   return answer;
 // }
 
-function solution(s, t){
-  let answer = s.split(t).length-1
-  return answer;
-}
+// function solution(s, t){
+//   let answer = s.split(t).length-1
+//   return answer;
+// }
 
-let str="COMPUTERPROGRAMMING";
-console.log(solution(str, 'G'));
+// let str="COMPUTERPROGRAMMING";
+// console.log(solution(str, 'G'));
+
+
+// 11. 대문자 찾기
+// function solution(s) {
+//   let answer = 0;
+//   for(let x of s) {
+//     if(x.match(/[A-Z]/)) answer++;
+//   }
+//   return answer;
+// }
+
+// function solution(s) {
+//   let answer = 0;
+//   for(let x of s) {
+//     if(x === x.toUpperCase()) answer++;
+//   }
+//   return answer;
+// }
+
+// askii number로 확인하기
+// function solution(s) {
+//   let answer = 0;
+//   for(let x of s) {
+//     //대문자 askii number: 65~90(A-Z)
+//     //소문자 askii number: 97~122(a-z)
+//     let num=x.charCodeAt();//askii num으로
+//     if(num>=65 && num<=90) answer++
+//   }
+//   return answer;
+// }
+
+// let str='KoreaTimeGood'
+// console.log(solution(str))
+
+// 12.대문자로 통일
+// function solution(s) {
+//   let answer=s;
+//   for(let x of s) {
+//     answer=s.toUpperCase()
+//   }
+//   return answer;
+// }
+
+// function solution(s) {
+//   let answer='';
+//   for(let x of s){
+//     let num = x.charCodeAt();//askii num으로 변환
+//     // String.fromCharCode=>askii num을 문자열로 변환
+//     if(num>=97 && num<=122) answer+=String.fromCharCode(num-32);//num-32 (-32를 해서 소문자를 대문자로 변환)
+//     else answer+=x;
+//   }
+ 
+//   return answer;
+// }
+
+// let str='ItisTimeToStudy'
+// console.log(solution(str))
+
+
 
