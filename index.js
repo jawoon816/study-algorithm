@@ -302,6 +302,31 @@
 // let str=["teacher", "time", "student", "beautiful", "good"];
 // console.log(solution(str));
 
+// 15.가운데 문자 출력
+// function solution(s){  
+//   let answer;
+//   for(let i = 0; i < s.length; i++) {
+//    if(s.length%2 !== 0) {
+//      answer=s[Math.ceil(s.length/2 -1)]
+//    } else {
+//      answer=s[(s.length/2 -1)]+s[s.length/2]
+//    }
+//   }
+//   return answer;
+// }
+
+// function solution(s){  
+//   let answer;
+//   let mid=Math.floor(s.length/2)
+//   //substring = substr
+//   if(s.length%2===1) answer=s.substring(mid, mid+1);
+//   else answer=s.substring(mid-1, mid+1);
+//   //if(s.length%2===1) answer=s.substr(mid, 1);
+//   //else answer=s.substr(mid-1, 2);
+//   return answer;
+// }
+// console.log(solution("study"));
+
 
 
 
