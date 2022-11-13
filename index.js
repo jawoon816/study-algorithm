@@ -328,13 +328,6 @@
 // console.log(solution("study"));
 
 // 16.중복문자 제거
-function solution(s){  
-  let answer="";
-  
-
-  return answer;
-}
-
 // function solution(s){  
 //   let answer="";
 //   //console.log(s.indexOf("K"));
@@ -344,7 +337,7 @@ function solution(s){
 //   }
 //   return answer;
 // }
-console.log(solution("ksekkset"));
+// console.log(solution("ksekkset"));
 
 
 
