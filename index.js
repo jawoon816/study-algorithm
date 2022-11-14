@@ -340,14 +340,25 @@
 // console.log(solution("ksekkset"));
 
 // 17.중복단어 제거
+// function solution(s){  
+//   let answer=[]
+//   for(let i=0; i<s.length; i++) {
+//     if(s.indexOf(s[i])===i){
+//       answer.push(s[i])
+//     }
+//   }
+//   return answer;
+// }
+
 function solution(s){  
-  let answer=[]
-  for(let i=0; i<s.length; i++) {
-    // console.log(i)
-    if(s.indexOf(s[i])===i){
-      answer.push(s[i])
-    }
-  }
+  let answer;
+  //console.log(s.indexOf("student"));
+  answer=s.filter((v, i)=>{
+      //console.log(v, i);
+      if(s.indexOf(v)===i) return v;
+  });
+
+  
   return answer;
 }
 let str=["good", "time", "good", "time", "student"];
