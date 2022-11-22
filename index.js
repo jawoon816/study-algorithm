@@ -384,11 +384,27 @@
 // console.log(solution(arr));
 
 // 2.보이는 학생
-function solution(arr){         
-  let answer = 0;
+function solution(arr) {
+  let answer,
+    max = arr[0],
+    a = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i + 1] > arr[i]) {
+    if (arr[i] > max) {
+      max = arr[i];
+      a.push(max);
+      answer = a.length + 1;
+    }
+  }
+  return answer;
+}
+
+function solution(arr) {
+  let answer = 1,
+    max = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
       answer++;
+      max = arr[i];
     }
   }
   return answer;
