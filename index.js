@@ -384,35 +384,55 @@
 // console.log(solution(arr));
 
 // 2.보이는 학생
-function solution(arr) {
-  let answer,
-    max = arr[0],
-    a = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-      a.push(max);
-      answer = a.length + 1;
-    }
+// function solution(arr) {
+//   let answer,
+//     max = arr[0],
+//     a = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//       a.push(max);
+//       answer = a.length + 1;
+//     }
+//   }
+//   return answer;
+// }
+
+// function solution(arr) {
+//   let answer = 1,
+//     max = arr[0];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       answer++;
+//       max = arr[i];
+//     }
+//   }
+//   return answer;
+// }
+
+// let arr = [130, 135, 148, 140, 145, 150, 150, 153];
+// console.log(solution(arr));
+
+// 3.가위바위보
+function solution(a, b) {
+  let answer = "";
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] === b[i]) answer += "D";
+    else if (
+      (a[i] === 1 && b[i] === 3) ||
+      (a[i] === 2 && b[i] === 1) ||
+      (a[i] === 3 && b[i] === 1)
+    )
+      answer += "A";
+    else answer += "B";
   }
+
   return answer;
 }
 
-function solution(arr) {
-  let answer = 1,
-    max = arr[0];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-      answer++;
-      max = arr[i];
-    }
-  }
-  return answer;
-}
-
-let arr = [130, 135, 148, 140, 145, 150, 150, 153];
-console.log(solution(arr));
-
+let a = [2, 3, 3, 1, 3];
+let b = [1, 1, 2, 2, 3];
+console.log(solution(a, b));
 
 
 
