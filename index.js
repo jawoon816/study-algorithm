@@ -435,34 +435,47 @@
 // console.log(solution(a, b));
 
 // 4. 점수 계산 
-function solution(arr) {
-  let answer = 0,
-    cnt = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 1) {
-      cnt++;
-      answer += cnt;
-    } else cnt = 0;
-  }
-  return answer;
-}
+// function solution(arr) {
+//   let answer = 0,
+//     cnt = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 1) {
+//       cnt++;
+//       answer += cnt;
+//     } else cnt = 0;
+//   }
+//   return answer;
+// }
 
-function solution(arr) {
-  let answer = 0,
-    cnt = 0;
-  for (let x of arr) {
-    if (x === 1) {
-      cnt++;
-      answer += cnt;
-    } else cnt = 0;
-  }
-  return answer;
-}
+// function solution(arr) {
+//   let answer = 0,
+//     cnt = 0;
+//   for (let x of arr) {
+//     if (x === 1) {
+//       cnt++;
+//       answer += cnt;
+//     } else cnt = 0;
+//   }
+//   return answer;
+// }
 
-let arr = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
-console.log(solution(arr));
+// let arr = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
+// console.log(solution(arr));
 
 // 5.등수구하기
+function solution(arr) {
+  let n=arr.length;
+  let answer=Array.from({length:n},()=>1);
+  for(let i=0; i<n; i++) {
+    for(let j=0; j<n; j++) {
+      if(arr[j]>arr[i]) answer[i]++;
+    }
+  }
+  return answer;
+}
+
+let arr = [87, 89, 92, 100, 76];
+console.log(solution(arr));
 
 
 
